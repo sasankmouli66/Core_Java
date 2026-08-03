@@ -8,9 +8,7 @@ public class MoviesTickets {
 	int SeatNo;
 	char seatNo;
 	String BookingStatus;
-	int AvailableTickets;
-	
-	
+	int AvailableTickets;	
 	void bookTickets()
 	{
 		AvailableTickets--;
@@ -50,8 +48,9 @@ public class MoviesTickets {
 		t2.AvailableTickets = 25;
 		t2.bookTickets();
 		System.out.println("Ticket Booked in Spider Man Brand New Day Movie");
-			
-
+		System.out.println("----------------------------------------------");
+		System.out.println("----------------------------------------------");	
+		t1.bookTickets();
 	}
 
 }
