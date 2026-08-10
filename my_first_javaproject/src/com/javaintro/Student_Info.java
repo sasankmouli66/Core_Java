@@ -32,6 +32,5 @@ public class Student_Info {
 		s2.BranchName = "CSE";
 		s2.display();
 
-
 	}
 }
