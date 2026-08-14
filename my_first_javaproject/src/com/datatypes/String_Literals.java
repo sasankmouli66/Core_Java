@@ -27,11 +27,7 @@ public class String_Literals {
 		else
 		{
 			System.out.println("false");
-		}
-		
-		
-		
-		
+		}	
 
 	}
 
