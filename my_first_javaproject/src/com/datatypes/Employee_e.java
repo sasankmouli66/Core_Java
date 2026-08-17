@@ -22,7 +22,7 @@ public class Employee_e {
 	int employeeId;
 	String empName;
 //	String designation;
-	static String designation;
+	String designation;
 	String department;
 	int Salary;
 	String Remote_Location;
@@ -36,24 +36,27 @@ public class Employee_e {
 		System.out.println("Designation      = "+designation);
 		System.out.println("Department       = "+department);
 		System.out.println("Salary           = "+Salary);
-		System.out.println("Remote Location  = "+Remote_Location);
+		System.out.println("Remote Location  = "+Remote_Location);	
 	}
 	
 	void promte_Emp()
 	{
 		up_DateSalary();
 		update_location();
-		designation = "Manger";	
+		designation = "Manger";
+		System.out.println("Update designation ="+designation);
 	}
 	
 	void up_DateSalary()
 	{
 		Salary = Salary + 5000;	
+		System.out.println("Update salary ="+Salary);
 	}
 	
 	void update_location()
 	{
 		Remote_Location = "hyderabad";
+		System.out.println("Updat Location :"+Remote_Location);
 	}
 	public static void main(String[] args) {
 		Employee_e e = new Employee_e();
@@ -63,8 +66,10 @@ public class Employee_e {
 		e.department = "java developer";
 		e.Salary = 20000;
 		e. Remote_Location = "JNTU";
-		e.update_location();
 		e.emp_Details();
+		System.out.println("---------------------------");
+		e.update_location();
+		
 		System.out.println("**************************");
 		Employee_e e1 = new Employee_e();
 		e1.employeeId = 2;
@@ -72,9 +77,10 @@ public class Employee_e {
 		e1.designation = "assotive";
 		e1.department = "java developer";
 		e1.Salary = 26000;
-		e1.Remote_Location = "JNTU";
-		e1.promte_Emp();
+		e1.Remote_Location = "JNTU";	
 		e1.emp_Details();
+		System.out.println("----------------------------");
+		e1.promte_Emp();
 	}
 
 }
