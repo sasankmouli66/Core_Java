@@ -15,6 +15,7 @@ public class Shopping {
 	double discount;
 
 	void product_Name(String name) {
+		
 		System.out.println("Poduct Name     :"+name);
 	}
 
