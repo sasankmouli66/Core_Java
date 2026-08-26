@@ -36,54 +36,53 @@ public class Developer_bug {
 	String priority;
 	String status;
 	String assignedDeveloper;
-	int getbugId(int bugid)
-	{
+
+	int getbugId(int bugid) {
 		return bugid;
 	}
-	String getApplicationName(String application)
-	{
+
+	String getApplicationName(String application) {
 		return application;
 	}
-	String getBugTitle(String title)
-	{
+
+	String getBugTitle(String title) {
 		return title;
 	}
-	 String getseverity(String severity)
-	{
-		 return severity;
+
+	String getseverity(String severity) {
+		return severity;
 	}
-	 String getPriority(String poriority)
-	 {
+
+	String getPriority(String poriority) {
 		return poriority;
-	 }
-	 String getStatus(String status)
-	 {
-		 return status;
-	 }
-	 String getAssignedDeveloper(String develperName)
-	 {
-		 return develperName;
-	 } 
-	 void assignToDeveloper(int bugid, String developerName)
-	 {
-		 System.out.println("Bug Id          :"+bugid);
-		 System.out.println("Developer       :"+developerName);
-	 }
-	 void updatestatus(String status)
-	 {
-		 System.out.println("Update status   :"+status);
-	 }
-	 
-	 void display(int a,String b,String c,String e, String f,String g,String h)
-	 {
-		 System.out.println("bug Id           :"+ a);
-		 System.out.println("Application Name :"+b); 
-		 System.out.println("Bug Tittle       :"+ c);
-		 System.out.println("severity         :"+ e);
-		 System.out.println("priority         :"+ f);
-		 System.out.println("status           :"+ g);
-	 }
-	 
+	}
+
+	String getStatus(String status) {
+		return status;
+	}
+
+	String getAssignedDeveloper(String develperName) {
+		return develperName;
+	}
+
+	void assignToDeveloper(int bugid, String developerName) {
+		System.out.println("Bug Id          :" + bugid);
+		System.out.println("Developer       :" + developerName);
+	}
+
+	void updatestatus(String status) {
+		System.out.println("Update status   :" + status);
+	}
+
+	void display(int a, String b, String c, String e, String f, String g, String h) {
+		System.out.println("bug Id           :" + a);
+		System.out.println("Application Name :" + b);
+		System.out.println("Bug Tittle       :" + c);
+		System.out.println("severity         :" + e);
+		System.out.println("priority         :" + f);
+		System.out.println("status           :" + g);
+	}
+
 	public static void main(String[] args) {
 		Developer_bug d = new Developer_bug();
 		d.bugId = 101;
@@ -93,16 +92,16 @@ public class Developer_bug {
 		d.priority = "high";
 		d.status = "open";
 		d.assignedDeveloper = "sai";
-		
-		int a   =d.getbugId(d.bugId);
-		String b=d.getApplicationName(d.applicationName);
+
+		int a = d.getbugId(d.bugId);
+		String b = d.getApplicationName(d.applicationName);
 		String c = d.getBugTitle(d.bugtitle);
 		String e = d.getseverity(d.severity);
-		String f = d.getPriority(d.priority );
+		String f = d.getPriority(d.priority);
 		String g = d.getStatus(d.status);
 		String h = d.getAssignedDeveloper(d.assignedDeveloper);
 		d.display(a, b, c, e, f, g, h);
-		d.assignToDeveloper(101,h);
+		d.assignToDeveloper(101, h);
 		d.updatestatus("close");
 	}
 

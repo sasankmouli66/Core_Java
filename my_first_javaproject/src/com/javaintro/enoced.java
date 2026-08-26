@@ -5,13 +5,12 @@ public class enoced {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		String[] s = sc.nextLine([s]);
+		String s = sc.nextLine();
 		String  k = sc.nextLine();
 		
-		for(int i = 0;i < s.length;i++)
+		for(int i = 0;i < s.length();i++)
 		{
-			k++;
-			String Encode = s[i] ;
+			
 		}
 	}
 
