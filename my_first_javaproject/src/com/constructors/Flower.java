@@ -3,9 +3,6 @@ package com.constructors;
 public class Flower{
 	String Name="Jasmine";
 	String color="white";
-	{
-		System.out.println("hiiiiiiiiii");
-	}
 	Flower(){
 		System.out.println("Parent class called:");
 	}
@@ -21,7 +18,6 @@ public class Flower{
 	 }
 	public static void main(String []args) {
 		Rose r = new Rose();
-		
 		r.flowerInfo();
 	}
 	void flowerInfo() {
