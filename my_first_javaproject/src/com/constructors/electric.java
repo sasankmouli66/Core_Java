@@ -17,9 +17,7 @@ class vehicle {
 	vehicle(String type) {
 		this.type = type;
 	}
-
 }
-
 class car extends vehicle {
 	String model;
 	double price;
