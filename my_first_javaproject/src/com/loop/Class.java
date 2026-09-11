@@ -16,10 +16,6 @@ public class Class {
 				break;
 			}	
 		} 
-//		else {
-//			System.out.println("Not prime");
-//			break;
-//		}
 		sc.close();
 	}
 	}
