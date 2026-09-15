@@ -2,7 +2,7 @@ package com.loop;
 
 import java.util.Scanner;
 
-public class Class {
+public class NthPrime {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("enter a number");
