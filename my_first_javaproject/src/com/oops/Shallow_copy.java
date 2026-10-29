@@ -1,6 +1,6 @@
 package com.oops;
 
-class Student{
+class Student implements Cloneable{
 	int id;
 	String name;
 	int section;
@@ -13,6 +13,10 @@ class Student{
 		this.school = school;
 		
 	}
+	@Override
+    protected Object clone() throws CloneNotSupportedException{
+        return super.clone();
+    }
 }
 
 class School{
@@ -24,10 +28,9 @@ class School{
 	
 }
 
-
 public class Shallow_copy {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws CloneNotSupportedException{
 		
 		School add = new School("Apollo School");
 		Student s = new Student(1,"sai",2,add);
@@ -36,6 +39,19 @@ public class Shallow_copy {
 		System.out.println(s.section);
 		System.out.println(s.school.schoolAddress);
 
+		Student s1 = (Student) s.clone();
+		
+		s1.id = 2;
+		System.out.println(s1.id);
+		System.out.println(s1.name);
+		System.out.println(s1.section);
+		System.out.println(s1.school.schoolAddress);
+		
+		Student s2 = (Student) s.clone();
+		System.out.println(s2.id);
+		System.out.println(s2.name);
+		System.out.println(s2.section);
+		System.out.println(s2.school.schoolAddress);
 		
 	}
 
