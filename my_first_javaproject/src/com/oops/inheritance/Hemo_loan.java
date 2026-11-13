@@ -19,7 +19,8 @@ public class Hemo_loan extends Bank_loan {
 		} else {
 			System.out.println("Your are not Eliglible for loan");
 		}
-		int checkEligibility = h1.getCibilEligiblity();
+		int checkEligibility = h1.getCibilEligiblity(cibilScore);
+		System.out.println("Rate of Interest: " + checkEligibility + "%");
 
 	}
 

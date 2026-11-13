@@ -39,28 +39,24 @@ public class Bank_loan {
 		return phoneStatus;
 	}
 	
-	int getCibilEligiblity() {
-		int cibil = getCibilscore();
-		int roi = 14;
-		
-		if(cibil > 750 && cibil <= 900) {
-			System.out.println("Excellent: You qualify for the best interest rates and quickest approvals.");
-			roi -= 3;
-		}
-		else if(cibil > 700 && cibil <= 749) {
-			System.out.println("Good:  Good chance of approval, though terms depend on individual lender policy.");
-			roi -= 7;
-		}
-		else if(cibil > 650 && cibil <= 699) {
-			System.out.println("Average: Lenders may approve loans but might charge higher interest rates.");
-			roi += 2;
-		}
-		else {
-			System.out.println("Low: High chance of rejection due to risky repayment history");
-			roi += 6;
-			
-		}
-		return cibil;
+	int getCibilEligiblity(int cibil) {
+	    int roi = 14;
+
+	    if (cibil > 750 && cibil <= 900) {
+	        System.out.println("Excellent: Best interest rates.");
+	        roi -= 3;
+	    } else if (cibil >= 700 && cibil <= 750) {
+	        System.out.println("Good: Good chance of approval.");
+	        roi -= 1;
+	    } else if (cibil >= 650 && cibil < 700) {
+	        System.out.println("Average: Higher interest rates may apply.");
+	        roi += 2;
+	    } else {
+	        System.out.println("Low: High chance of rejection.");
+	        roi += 6;
+	    }
+
+	    return roi;
 	}
 
 	public static void main(String[] args) {
@@ -68,21 +64,22 @@ public class Bank_loan {
 		Bank_loan b1 = new Bank_loan();
 		double salary = b1.getEmpSalary();
 		int cibilScore = b1.getCibilscore();
-		if(salary > 1000000.0 && (cibilScore > 300 && cibilScore <= 900)) {
+		if(salary >= 1000000.0 && (cibilScore > 300 && cibilScore <= 900)) {
 			System.out.println("Congralation check more details..");
 			if(b1.getArdhar() && b1.getPan() && b1.getPhone()) {
 				System.out.println("Details are Valid..");
+				int checkEligibility = b1.getCibilEligiblity(cibilScore);
+				System.out.println("Rate of Interest: " + checkEligibility + "%");
 			}
 			else {
 				System.out.println("details are not valid..");
+				System.out.println("Loan will be rejected");
 			}
 			
 		}
 		else {
 			System.out.println("Your are not Eliglible for loan");
 		}	
-		int checkEligibility = b1.getCibilEligiblity();
-		sc.close();
 	}
 	
 }
