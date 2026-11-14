@@ -2,10 +2,9 @@ package com.oops.inheritance;
 
 public class Polymorphism_overloading {
 
-	public static void main(String[] args) {
+	 void main(String[] args) {
 		System.out.println("Main method");
-		Polymorphism_overloading p = new Polymorphism_overloading();
-		p.sub(10,20);
+		sub(10,20);
 
 	}
 	
